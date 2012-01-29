@@ -1,6 +1,7 @@
 .git
 .project
 .pydevproject
+.gaedata
 .DS_Store
 *.pyc
 *.pyo

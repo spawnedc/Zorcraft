@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>{% block title %}{% endblock %} | Zorcraft</title>
+		<link type="text/css" rel="stylesheet" src="/static/css/main.css" />
+		{% block extra_css %}{% endblock %}
+
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		{% block preload_js %}{% endblock %}
+	</head>
+	<body>
+		{% block content %}{% endblock %}
+
+		<script type="text/javascript" src="/static/js/libs/underscore.js"></script>
+		<script type="text/javascript" src="/static/js/libs/backbone.js"></script>
+		<script type="text/javascript" src="/static/js/libs/backbone.localStorage.js"></script>
+		{% block extra_js %}{% endblock %}
+	</body>
+</html>

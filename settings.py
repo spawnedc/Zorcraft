@@ -1,7 +1,8 @@
 # Initialize App Engine and import the default settings (DB backend, etc.).
 # If you want to use a different backend you have to remove all occurences
 # of "djangoappengine" from this file.
-from djangoappengine.settings_base import *
+import utils.logging_colour
+from djangoappengine.settings_base import DATABASES
 
 import os
 
@@ -20,6 +21,8 @@ INSTALLED_APPS = (
     'djangotoolbox',
     'autoload',
     'dbindexer',
+    'utils',
+    'zorcraft',
 
     # djangoappengine should come last, so it can override a few manage.py commands
     'djangoappengine',

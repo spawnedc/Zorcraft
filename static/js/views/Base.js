@@ -1,11 +1,9 @@
 zc.views.Base = Backbone.View.extend({
-
-	el: $('body'),
+	// This is the base view which all the other views should extend.
 
 	initialize: function() {
 		_.bindAll(this, 'log', 'info', 'warn', 'error');
 	},
-
 	// Basic log wrapper
 	log: function(msg, level) {
 		if(zc.debugMode) {
@@ -17,18 +15,14 @@ zc.views.Base = Backbone.View.extend({
 			console[level](msg);
 		}
 	},
-
 	// Shortcut functions
 	info: function(msg) {
 		this.log(msg, 'info');
 	},
-
 	warn: function(msg) {
 		this.log(msg, 'warn');
 	},
-
 	error: function(msg) {
 		this.log(msg, 'error');
 	},
-
 });

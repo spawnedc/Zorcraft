@@ -1,4 +1,4 @@
-zc.views.Tile = zc.views.Base.extend({
+zc.map.Tile = Backbone.View.extend({
 
 	tagName: 'div',
 	className: 'tile',
@@ -20,14 +20,12 @@ zc.views.Tile = zc.views.Base.extend({
 		return this.render();
 	},
 	render: function() {
-		this.el = $(this.el);
-		// Obvious, isn't it?
-		this.el.css({
+		this.$el.css({
 			'left': this.options.xpos,
 			'top': this.options.ypos
 		});
-		this.el.data('x', this.x);
-		this.el.data('y', this.y);
+		this.$el.data('x', this.x);
+		this.$el.data('y', this.y);
 		return this;
 	}
 });

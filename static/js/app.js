@@ -1,2 +1,4 @@
-zc.app = new zc.views.Map();
-zc.app.render();
+// Create the main game object
+zc.game = new zc.main.Game();
+// Here we go...
+zc.game.render();

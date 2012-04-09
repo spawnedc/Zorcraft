@@ -1,6 +1,6 @@
-zc.views.Map = zc.views.Base.extend({
+zc.map.Main = Backbone.View.extend({
 
-	el: $('#map'),
+	el: '#map',
 
 	events: {
 		'mouseenter .tile': 'showTileInfo'
@@ -26,12 +26,12 @@ zc.views.Map = zc.views.Base.extend({
 		// This will be useful when calculating each tile's y position
 		this.half_point = (this.options.map_size * (this.options.tile_size / 2)) / 2;
 
-		this.info('Initialized map view');
+		zc.info('Initialized map view');
 	},
 	showTileInfo: function(evt) {
 		// Shows the info for the tile (x, y)
 		var target = $(evt.currentTarget);
-		this.info('Tile info: x: ' + target.data('x') + ', y: ' + target.data('y'));
+		zc.info('Tile info: x: ' + target.data('x') + ', y: ' + target.data('y'));
 	},
 	addTile: function(x, y) {
 		// Watch these calculations carefully, they took a lot time to figure out
@@ -44,7 +44,7 @@ zc.views.Map = zc.views.Base.extend({
 		var ypos = this.half_point - ((y * this.options.ycorrection) - (x * this.options.ycorrection));
 
 		// Create our new TileView
-		this.tiles[y][x] = new zc.views.Tile({
+		this.tiles[y][x] = new zc.map.Tile({
 			ypos: ypos,
 			xpos: xpos,
 			x: x,
@@ -52,10 +52,10 @@ zc.views.Map = zc.views.Base.extend({
 		});
 
 		// TODO: These are for testing, they shouldn't be here
-		this.tiles[y][x].el.addClass('tile-' + x + '-' + y);
+		this.tiles[y][x].$el.addClass('tile-' + x + '-' + y);
 
 		// Finally add the tile to our map
-		this.el.append(this.tiles[y][x].el);
+		this.$el.append(this.tiles[y][x].el);
 	},
 	render: function() {
 		// TODO: Instead of a fixed sizes, we need to be able to pass a json object with
@@ -66,6 +66,6 @@ zc.views.Map = zc.views.Base.extend({
 				this.addTile(x, y);
 			}
 		}
-		this.el.addClass('ready');
+		this.$el.addClass('ready');
 	}
 });

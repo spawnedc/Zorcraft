@@ -6,21 +6,24 @@
 		<link type="text/css" rel="stylesheet" href="/static/css/main.css" media="screen" />
 		{% block extra_css %}{% endblock %}
 
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		{% block preload_js %}{% endblock %}
 	</head>
 	<body>
 		{% block content %}{% endblock %}
 
-		<script type="text/javascript" src="/static/js/libs/underscore.js"></script>
-		<script type="text/javascript" src="/static/js/libs/backbone.js"></script>
-		<script type="text/javascript" src="/static/js/libs/backbone.localStorage.js"></script>
-		<script type="text/javascript" src="/static/js/zorcraft.js"></script>
-		<script type="text/javascript" src="/static/js/views/Base.js"></script>
-		<script type="text/javascript" src="/static/js/views/Tile.js"></script>
-		<script type="text/javascript" src="/static/js/views/Map.js"></script>
-
-		<script type="text/javascript" src="/static/js/app.js"></script>
+		{# Beautiful libs #}
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="/static/js/libs/underscore.js"></script>
+		<script src="/static/js/libs/backbone.js"></script>
+		{# Include main zc object #}
+		<script src="/static/js/zorcraft.js"></script>
+		{# Include map views #}
+		<script src="/static/js/views/map/Tile.js"></script>
+		<script src="/static/js/views/map/Map.js"></script>
+		{# Include main Game view #}
+		<script src="/static/js/views/Game.js"></script>
+		{# Include main application trigger #}
+		<script src="/static/js/app.js"></script>
 		{% block extra_js %}{% endblock %}
 	</body>
 </html>

@@ -1,16 +1,31 @@
 zc.main.Game = Backbone.View.extend({
 
-    el: 'body',
+	el: 'body',
 
-    map: null,
+	map: null,
 
-    initialize: function() {
-        this.map = new zc.map.Main();
-        return this;
-    },
+	initialize: function() {
+		_.bindAll(this, 'loadMap', 'renderMap');
+		return this;
+	},
 
-    render: function() {
-        this.map.render();
-        return this;
-    }
+	loadMap: function() {
+		$.ajax({
+			url: '/static/data/map1.json',
+			data: {},
+			dataType: 'json',
+			error: function(err) { console.warn(err) },
+			success: this.renderMap
+		});
+	},
+
+	renderMap: function(mapData) {
+		this.map = new zc.map.Main({data: mapData});
+		this.map.render();
+	},
+
+	render: function() {
+		this.loadMap();
+		return this;
+	}
 });

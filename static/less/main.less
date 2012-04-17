@@ -1,12 +1,18 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	width: 100%;
+}
 #map {
-	border: 1px solid #333;
-	height: 600px;
+	height: 100%;
 	overflow: hidden;
 	position: relative;
-	width: 800px;
+	width: 100%;
 
 	.tile {
-		background: url('../img/grass_and_water.png') -128px -320px;
+		background: url('../img/grass_and_water.png') no-repeat;
 		height: 64px;
 		line-height: 64px;
 		position: absolute;
@@ -14,6 +20,26 @@
 
 		&:hover {
 			opacity: .9;
+		}
+
+		&.water {
+			background-position: -128px -320px;
+		}
+
+		&.grass {
+			background-position: 0px 0px;
+		}
+
+		&.topleft {
+			background-position: -64px -128px;
+		}
+
+		&.left {
+			background-position: 0px -256px;
+		}
+
+		&.top {
+			background-position: -64px -256px;
 		}
 	}
 }

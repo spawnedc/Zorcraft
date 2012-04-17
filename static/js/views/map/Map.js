@@ -8,9 +8,9 @@ zc.map.Main = Backbone.View.extend({
 
 	// Defaults
 	options: {
-		map_size: 20,
-		x_size: 20,
-		y_size: 20,
+		map_size: 10,
+		x_size: 10,
+		y_size: 10,
 		tile_size: 64,
 		xcorrection: 30,
 		ycorrection: 15,
@@ -22,6 +22,12 @@ zc.map.Main = Backbone.View.extend({
 
 	initialize: function() {
 		_.bindAll(this, 'render', 'showTileInfo');
+
+		this.mapData = this.options.data;
+
+		this.options.x_size = this.mapData.length;
+		this.options.y_size = this.mapData[0].length;
+		this.options.map_size = this.options.x_size;
 
 		// This will be useful when calculating each tile's y position
 		this.half_point = (this.options.map_size * (this.options.tile_size / 2)) / 2;
@@ -48,7 +54,8 @@ zc.map.Main = Backbone.View.extend({
 			ypos: ypos,
 			xpos: xpos,
 			x: x,
-			y: y
+			y: y,
+			className: 'tile ' + this.mapData[x][y]
 		});
 
 		// TODO: These are for testing, they shouldn't be here

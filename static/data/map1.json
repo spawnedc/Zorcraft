@@ -1,0 +1,18 @@
+[
+	["topleft", "top", "top", "top", "top", "top", "top", "top", "top", "water"],
+	["left", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "water"],
+	["left", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "water"],
+	["left", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "water"],
+	["left", "grass", "grass", "grass", "water", "water", "grass", "grass", "grass", "water"],
+	["left", "grass", "grass", "grass", "water", "water", "grass", "grass", "grass", "water"],
+	["left", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "water"],
+	["left", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "water"],
+	["left", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "water"],
+	["left", "water", "water", "water", "water", "water", "water", "water", "water", "water"],
+	["left", "water", "water", "water", "water", "water", "water", "water", "water", "water"],
+	["left", "water", "water", "water", "water", "water", "water", "water", "water", "water"],
+	["left", "water", "water", "water", "water", "water", "water", "water", "water", "water"],
+	["left", "water", "water", "water", "water", "water", "water", "water", "water", "water"],
+	["left", "water", "water", "water", "water", "water", "water", "water", "water", "water"],
+	["water", "water", "water", "water", "water", "water", "water", "water", "water", "water"]
+]

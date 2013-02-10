@@ -1,0 +1,46 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/spawnedc\/Sites\/zorcraft\/zorcraft\/static\/sass\/main\.scss}line{font-family:\000033}}
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  width: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/spawnedc\/Sites\/zorcraft\/zorcraft\/static\/sass\/main\.scss}line{font-family:\0000311}}
+#map {
+  display: none;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/spawnedc\/Sites\/zorcraft\/zorcraft\/static\/sass\/main\.scss}line{font-family:\0000319}}
+.tile {
+  -webkit-transform: rotate(45deg) skew(0deg, 30deg);
+  -moz-transform: rotate(45deg) skew(0deg, 30deg);
+  -ms-transform: rotate(45deg) skew(0deg, 30deg);
+  -o-transform: rotate(45deg) skew(0deg, 30deg);
+  transform: rotate(45deg) skew(0deg, 30deg);
+  background: url("/static/img/iso-64x64-outside.png") no-repeat;
+  height: 64px;
+  line-height: 64px;
+  position: absolute;
+  width: 64px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/spawnedc\/Sites\/zorcraft\/zorcraft\/static\/sass\/main\.scss}line{font-family:\0000327}}
+  .tile:hover {
+    opacity: .7; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/spawnedc\/Sites\/zorcraft\/zorcraft\/static\/sass\/main\.scss}line{font-family:\0000331}}
+  .tile.water {
+    background-position: -256px -512px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/spawnedc\/Sites\/zorcraft\/zorcraft\/static\/sass\/main\.scss}line{font-family:\0000335}}
+  .tile.grass {
+    background-position: -256px -192px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/spawnedc\/Sites\/zorcraft\/zorcraft\/static\/sass\/main\.scss}line{font-family:\0000339}}
+  .tile.topleft {
+    background-position: -192px -192px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/spawnedc\/Sites\/zorcraft\/zorcraft\/static\/sass\/main\.scss}line{font-family:\0000343}}
+  .tile.left {
+    background-position: -64px -192px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/spawnedc\/Sites\/zorcraft\/zorcraft\/static\/sass\/main\.scss}line{font-family:\0000347}}
+  .tile.top {
+    background-position: -384px -192px; }

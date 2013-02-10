@@ -60,6 +60,7 @@
 				xpos: xpos,
 				x: x,
 				y: y,
+				zIndex: this.options.y_size - y,
 				className: 'tile ' + this.mapData[x][y]
 			});
 

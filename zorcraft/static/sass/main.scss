@@ -1,3 +1,5 @@
+@import 'bourbon/bourbon';
+
 html, body {
 	height: 100%;
 	margin: 0px;
@@ -5,14 +7,16 @@ html, body {
 	position: relative;
 	width: 100%;
 }
+
 #map {
+	// @include transform(rotate(45deg));
 	height: 100%;
 	overflow: hidden;
 	position: relative;
 	width: 100%;
 
 	.tile {
-		background: url('/static/img/grass_and_water.png') no-repeat;
+		background: url('/static/img/iso-64x64-outside.png') no-repeat;
 		height: 64px;
 		line-height: 64px;
 		position: absolute;
@@ -23,23 +27,23 @@ html, body {
 		}
 
 		&.water {
-			background-position: -128px -320px;
+			background-position: -256px -512px;
 		}
 
 		&.grass {
-			background-position: 0px 0px;
+			background-position: -256px -192px;
 		}
 
 		&.topleft {
-			background-position: -64px -128px;
+			background-position: -192px -192px;
 		}
 
 		&.left {
-			background-position: 0px -256px;
+			background-position: -64px -192px;
 		}
 
 		&.top {
-			background-position: -64px -256px;
+			background-position: -384px -192px;
 		}
 	}
 }

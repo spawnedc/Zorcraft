@@ -24,7 +24,8 @@
 		render: function () {
 			this.$el.css({
 				'left': this.options.xpos,
-				'top': this.options.ypos
+				'top': this.options.ypos,
+				'z-index': this.options.zIndex
 			});
 			this.$el.data('x', this.x);
 			this.$el.data('y', this.y);

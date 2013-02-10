@@ -79,6 +79,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'compressor.finders.CompressorFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -124,7 +125,32 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'compressor',
 )
+
+########## COMPRESSION CONFIGURATION
+# See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_ENABLED
+# From the docs: Default: the opposite of DEBUG
+# Uncomment the following line to test compressing locally
+COMPRESS_ENABLED = True
+
+# See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_CSS_FILTERS
+COMPRESS_CSS_FILTERS = [
+    'compressor.filters.template.TemplateFilter',
+]
+
+# See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_JS_FILTERS
+COMPRESS_JS_FILTERS = [
+    'compressor.filters.template.TemplateFilter',
+]
+
+# See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_PRECOMPILERS
+# For --debug-info flag see: http://bricss.net/post/33788072565/using-sass-source-maps-in-webkit-inspector
+# This flag is disabled on prod.
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'sass --debug-info --scss {infile} {outfile}'),
+)
+########## END COMPRESSION CONFIGURATION
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

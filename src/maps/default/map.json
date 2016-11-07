@@ -1,0 +1,37 @@
+{
+  "tileset": {
+    "image": "grassland_tiles.png",
+    "rows": 15,
+    "cols": 16
+  },
+  "rows": 10,
+  "cols": 10,
+  "tileSize": {
+    "width": 64,
+    "height": 32
+  },
+  "tiles": {
+    "grass": {"index": 5, "width": 64, "height": 32},
+    "top": {"index": 40, "width": 64, "height": 96},
+    "left": {"index": 43, "width": 64, "height": 96},
+    "bottom": {"index": 46, "width": 64, "height": 96},
+    "right": {"index": 41, "width": 64, "height": 96},
+    "topRightWall": {"index": 36, "width": 64, "height": 96},
+    "topLeftWall": {"index": 37, "width": 64, "height": 96},
+    "bottomRightWall": {"index": 35, "width": 64, "height": 96},
+    "bottomLeftWall": {"index": 35, "width": 64, "height": 96}
+  },
+  "data": [
+    ["top", "topRightWall", "topRightWall", "topRightWall", "topRightWall", "topRightWall", "topRightWall", "topRightWall", "topRightWall", "right"],
+    ["topLeftWall", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "bottomRightWall"],
+    ["topLeftWall", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "bottomRightWall"],
+    ["topLeftWall", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "bottomRightWall"],
+    ["topLeftWall", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "bottomRightWall"],
+    ["topLeftWall", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "bottomRightWall"],
+    ["topLeftWall", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "bottomRightWall"],
+    ["topLeftWall", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "bottomRightWall"],
+    ["topLeftWall", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "bottomRightWall"],
+    ["topLeftWall", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "bottomRightWall"],
+    ["left", "bottomLeftWall", "bottomLeftWall", "bottomLeftWall", "bottomLeftWall", "bottomLeftWall", "bottomLeftWall", "bottomLeftWall", "bottomLeftWall", "bottom"]
+  ]
+}

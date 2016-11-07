@@ -4,6 +4,7 @@ html,
 body {
   height: 100%;
   margin: 0;
+  overflow: hidden;
   padding: 0;
   position: relative;
   width: 100%;
@@ -14,7 +15,7 @@ body {
   color: $color-white;;
 }
 
-.app {
+.canvas {
   height: 100%;
   width: 100%;
 }
